@@ -365,7 +365,7 @@ body{
         display: flex;
         position: static;
         justify-content: space-between;
-        padding-top: 40px;
+        // padding-top: 40px;
         flex-direction: row;
         &-item{
             border: none;
@@ -381,7 +381,7 @@ body{
     .nav{
         order: 2;
         justify-content: space-between;
-        padding-top: 40px;
+        // padding-top: 40px;
     }
 
     .tel{
@@ -537,36 +537,6 @@ body{
 
 // end of contacts style
 
-.container{
-    position: relative;
-}
-
-.bg-image{
-    position: absolute;
-    width: 350px;
-    height: 660px;
-    top: -55px;
-    left: -20px;
-}
-
-@media(min-width: 768px){
-    .bg-image{
-        position: absolute;
-        width: 610px;
-        height: 900px;
-        top: -130px;
-        left: -255px;
-        
-    }
-}
-
-@media(min-width: 1024px){
-    .bg-image{
-        top: -170px;
-        left: -165px;
-    }
-}
-
 .text-block{
     margin-top: 70px;
     position: relative;
@@ -613,6 +583,57 @@ body{
         &_fourth{
             animation: down-to-up 1.5s 2.2s forwards;
         }
+    }
+}
+
+.container{
+    position: relative;
+}
+
+.bg-image{
+    position: absolute;
+    width: 350px;
+    height: 660px;
+    top: -55px;
+    left: -20px;
+}
+
+@media(min-width: 768px){
+    .bg-image{
+        width: 610px;
+        height: 900px;
+        top: -80px;
+        left: -255px;
+        
+    }
+}
+
+
+
+@media(min-width: 1024px){
+    .bg-image{
+        top: -100px;
+        left: -165px;
+    }
+}
+
+@media (min-width:768px){
+    .text-block{
+        margin-top: 0;
+        top: -60px;
+    }
+}
+
+@media(min-width: 1280px){
+    .bg-image{
+        top: -170px;
+    }
+}
+
+@media (min-width:1280px){
+    .text-block{
+        margin-top: 70px;
+        top: 0;
     }
 }
 
@@ -870,7 +891,7 @@ $line-height: $clip-height - 5px;
 ** Apply styles to the parent element
 */
 .Words {
-  margin: 0 auto;
+  position: relative;
 //   padding: 80px 0;
   font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif;
   font-size: 90px;
@@ -971,6 +992,9 @@ $line-height: $clip-height - 5px;
 
         .Words {
             font-size: 55px;
+            position: relative;
+            top: -100px;
+            height: 340px;
         }
 
       .Words-line {
