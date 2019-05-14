@@ -1,0 +1,956 @@
+@import 'reset.scss';
+
+@font-face {
+    font-family: 'Proxima Nova';
+    src: url('../fonts/ProximaNova/ProximaNova-Bold.woff2') format('woff2'),
+        url('../fonts/ProximaNova/ProximaNova-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Proxima Nova';
+    src: url('../fonts/ProximaNova/ProximaNova-Regular.woff2') format('woff2'),
+        url('../fonts/ProximaNova/ProximaNova-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Proxima Nova';
+    src: url('../fonts/ProximaNova/ProximaNovaA-Light.woff2') format('woff2'),
+        url('../fonts/ProximaNova/ProximaNovaA-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@mixin text {
+    font-size: 14px;
+    letter-spacing: 0.7px;
+    font-weight: 300;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Proxima Nova', sans-serif;
+    min-width: 320px;
+}
+
+.container{
+    max-width: 1560px;
+    margin: 0 auto;
+    padding: 0 20px;
+    
+}
+
+.flex-column-container{
+    display: flex;
+    flex-direction: column;
+}
+
+
+// banner style
+
+.banner{
+    background: url(../img/football.png) no-repeat center/cover #0a0e34;
+
+    &_bottom{
+        background-image: url(../img/footer_bg.png);
+    }
+
+    &__btns{
+        display: flex;
+        justify-content: center;
+        padding-bottom: 110px;
+    }
+
+    &__btn{
+        width: 300px;
+    }
+
+    &__nav{
+        display: flex;
+        margin-left: auto;
+        padding: 30px 0 180px;
+        justify-content: space-between;
+        width: 570px;
+    }
+}
+
+.header{
+    display: flex;
+    padding: 50px 0 300px;
+    
+    &__info{
+        @include text;
+        margin-left: auto;
+        color: #fff;
+        align-self: center;
+    }
+}
+
+
+
+.nav{
+    &__item{
+        @include text;
+        color: #9071ea;
+        padding: 0 5px;
+        transition: .3s;
+
+        &:hover{
+            color: #fff;
+        }
+    }
+}
+
+.title{
+    font-size: 90px;
+    color: #fff;
+    letter-spacing: 4.5px;
+    text-transform: uppercase;
+    font-weight: 700;
+    position: relative;
+
+    
+
+    
+    &__string:nth-child(odd){
+        position: relative;
+        z-index: 2;
+    }
+
+    &__string:nth-child(even){
+        text-align: right;
+        position: relative;
+    }
+
+    &:before{
+        content: url(../img/stripe.png);
+        display: block;
+        width: 255px;
+        height: 315px;
+        position: absolute;
+        top: -90px;
+        left: 395px;
+        z-index: 1;
+    }
+}
+
+.subtitle{
+    font-size: 36px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #a495cc;
+}
+
+.btn{
+    display: block;
+    position: relative;
+    padding: 25px 0 25px 105px;
+    border-radius: 50px;
+    background: url(../img/Icon_-_Apple.png) no-repeat 37px 18px #5e42b0;
+    color: #fff;
+    border:none;
+    text-align: left;
+    box-shadow: 0 16px 24px #0a0e34;
+    cursor: pointer;
+    transition: .3s;
+
+    &:hover{
+        background-color: lighten($color: #0a0e34, $amount: 10%)
+    }
+
+    &_google{
+        background-image: url(../img/Icon_-_Google_Play.png);
+        padding-left: 125px;
+        background-position: 64px 18px;
+    }
+    &_m-right{
+        margin-right: 50px;
+    }
+
+    &__text{
+        @include text;
+        display: block;
+
+        &_bold{
+            font-weight: bold;
+        }
+    }
+}
+
+@media (max-width: 1530px){
+    .header{
+        padding-bottom: 200px;
+    }
+    .title{
+        width: 85%;
+        margin: 0 auto;
+        font-size: 64px;
+        z-index: 1;
+        
+        &__string:nth-child(even){
+            text-align: left;
+            margin-left: 110px;
+        }
+
+        &:before{
+            top: -70px;
+            left: 195px;
+            z-index: 0;
+        }
+    }
+
+    .banner{
+        &__nav{
+            justify-content: space-around;
+            flex-wrap: wrap;
+            padding-top: 180px;
+            margin-left: 0;
+            width: auto;
+        }
+    }
+
+    .btn{
+        &_m-right{
+            margin-right: 30px;
+        }
+    }
+
+}
+
+@media (max-width: 768px){
+
+    .header{
+        &__info{
+            display: none;
+        }
+
+        .logo{
+            margin: 0 auto;
+        }
+    }
+
+    .title{
+        width: 100%;
+        font-size: 32px;
+        letter-spacing: 1.6px;
+
+        &__string:nth-child(even){
+            margin-left: 52px;
+            margin-top: 28px;
+        }
+
+        &:before{
+            content: url(../img/stripe_m.png);
+            width: 140px;
+            height: 174px;
+            top: -15px;
+            left: 72px;
+        }
+    }
+
+    .nav{
+        order: 1;
+        
+        &__item{
+            padding-top: 10px;
+            font-size: 12px;
+        }
+    }
+
+    .banner{
+        &__btns{
+            padding: 120px 0 0 0;
+        }
+
+        &__btn{
+            width: 145px;
+            
+        }
+
+        &__nav{
+            padding: 45px 20px 20px;
+        }
+    }
+
+
+    .btn{
+        background-size: 15px 17px;
+        padding: 10px 0 10px 45px;
+        background-position: 20px 9px;
+        
+        &__text{
+            font-size: 8px;
+            letter-spacing: 0.4px;
+        }
+
+        &_m-right{
+            margin-right: 10px;
+        }
+    }
+}
+
+// end of banner style
+
+// sections with slider stile
+
+.fotorama__dot {
+    width: 10px;
+    height: 10px;
+    background-color: #d8d8d8;
+    border: none;
+}
+
+.fotorama__nav__frame.fotorama__active .fotorama__dot{
+    width: 10px;
+    height: 10px;
+    border-width: 0;
+    background-color: #5e42b0;
+}
+
+.fotorama__nav{
+    padding-bottom: 15px;
+}
+
+.slider{
+    position: relative;
+    z-index: 0;
+    background-color: #f5f4fa;
+    padding-top: 80px;
+
+    &__title{
+        position: relative;
+        z-index: 1;
+        padding: 20px 0 240px;
+    }
+    
+}
+
+.section{
+    position: relative;
+
+    &__title{
+        color: #e7e7e7;
+        font-size: 50px;
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+
+    &__img{
+        position: absolute;
+        top: 90px;
+        left:10%;
+        z-index: 1;
+
+        &_basket{
+            top: 100px;
+            left: 10%;
+        }
+    }
+
+    &_mob{
+        display: none;
+    }
+}
+
+@media (max-width: 768px){
+    .section_mob{
+        display: block;
+    }
+}
+
+// end of athlets and players mobile style 
+
+// sections 'be active', 'find contact' and 'work it' style
+
+.card{
+    &__img{
+        height: 351px;
+        background: url(../img/img_1.jpg) no-repeat center/cover;
+
+        &_find-contact{
+            background-image: url(../img/img_2.jpg);
+        }
+
+        &_work-it{
+            background-image: url(../img/img_3.jpg);
+        }
+    }
+
+    &__content{
+        position: relative;
+        padding-top: 35px;
+    }
+
+    &__title-container{
+        display: flex;
+        padding-bottom: 25px;
+    }
+
+    &__title{
+        color: #c1c1c1;
+        font-size: 28px;
+        font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: 1.4px;
+        
+        &_margin{
+            margin-left: 12px;
+        }
+    }
+
+    &__content-title{
+        color:#e7e7e7;;
+        font-size: 28px;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+
+    &__number-box{
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #5e42b0;
+        width: 70px;
+        height: 70px;
+        top: -48px;
+        left: 20px;
+
+        .card__item-number{
+            color: #fff;
+            position: relative;
+            
+
+            &::after{
+                background-color: #8e7bc8;
+                bottom: -5px;
+            }
+        }
+    }
+
+    &__item-number{
+        position: relative;
+        color: #000000;
+        font-size: 14px;
+        letter-spacing: 0.7px;
+        font-weight: bold;
+        text-transform: uppercase;
+        padding-top: 5px;
+
+        &::after{
+            content: '';
+            display: block;
+            position: absolute;
+            bottom: 4px;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            border-radius: 2px;
+            background-color: #5e42b0;
+        }
+    }
+
+    &__text{
+        color: #000000;
+        font-size: 15px;
+        line-height: 18px;
+        letter-spacing: 0.75px;
+        padding-bottom: 5px;
+
+        &_min-height{
+            min-height: 85px;
+        }
+
+        &_with-underline{
+            margin-bottom: 50px;
+            position: relative;
+
+            &::after{
+            content: '';
+            display: block;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 22px;
+            height: 5px;
+            border-radius: 2px;
+            background-color: #5e42b0;
+            }
+        }
+    }
+}
+
+@media(min-width: 768px){
+    .card{
+
+        &__img{
+            height: 584px;
+        }
+
+        &__content-title{
+            font-size: 90px;
+        }
+
+        &__text{
+            font-size: 24px;
+            line-height: 28px;
+        }
+
+        &__number-box{
+            width: 115px;
+            height: 115px;
+            top: -88px;
+        }
+
+        &__content{
+            padding-top: 87px;
+        }
+
+        &__title-container{
+            padding-bottom: 35px;
+        }
+
+        &__item-number{
+            font-size: 24px;
+        }
+        
+    }
+}
+
+@media(min-width: 1530px){
+    
+
+    .card{
+        display: flex;
+
+        &__content{
+            flex-basis: 50%;
+            margin-left: auto;
+        }
+
+        &__img{
+            flex-basis: 50%;
+            height: auto;
+        }
+
+        &__content{
+            padding-top: 250px;
+        }
+
+        &__title-container{
+            padding-bottom: 110px;
+        }
+
+        .container{
+            width: 765px;
+            margin: 0;
+            padding: 0 130px 0 130px;
+        }
+
+        &__text{
+            &_min-height{
+                min-height: 170px;
+            }
+            &_with-underline{
+                margin-bottom: 110px;
+            }
+        }
+
+        &__number-box{
+            width: 160px;
+            height: 160px;
+            top: 213px;
+            left: -80px;
+        }
+
+        &_reverse{
+            flex-direction: row-reverse;
+
+            .card{
+                &__content{
+                    display: flex;
+                    justify-content: flex-end;
+                }
+
+                &__content{
+                    width: 100%;
+                }
+            }
+            
+            .container{
+                padding: 0 93px 0 20px;
+            }
+
+            .card__number-box{
+                left: auto;
+                right: -80px;
+            }
+        }
+    }
+}
+
+// end of 'be active', 'find contact' and 'work it' style
+
+// athlets and players desktop and tablet style
+
+@media (max-width: 768px){
+    .section_desc{
+        display: none;
+    }
+}
+
+.row{
+    display: flex;
+    position: relative;
+    
+
+    &_grey{
+        background-color: #f5f4fa;
+    }
+
+    &_purple{
+        background-color: #5e42b0;
+
+        .card{
+            &__text{
+                color: #fff;
+            }
+
+            &__item-number{
+                &::after{
+                    background-color: #efefef;
+                }
+            }
+
+        }
+    }
+
+    &_dark-blue{
+        background-color: #0a0e34;
+
+        .card{
+            &__text{
+                color: #fff;
+            }
+
+            &__item-number{
+                color: #916fe9;
+                &::after{
+                    background-color: #fff;
+                }
+            }
+
+        }
+    }
+
+}
+
+.section_desc{
+    overflow: hidden;
+}
+
+@media (min-width: 768px){
+    .section_desc{
+        .card{
+            flex-basis: 65%;
+            margin-left: auto;
+
+            &__item-number{
+                position: relative;
+                font-size: 18px;
+                letter-spacing: 0.7px;
+                padding-top: 3px;
+        
+                &::after{
+                    bottom: 5px;
+                }
+            }
+
+            &__text{
+                padding-bottom: 35px;
+            }
+
+            &__title{
+                font-size: 36px;
+            }
+
+            &__title-container{
+                margin-top: 20px;
+            }
+        }
+
+        &.section_reverse{
+            .card{
+                margin-left: 0;
+                margin-right: auto;
+            }
+        }
+
+        
+
+        .container{
+            padding-right: 50px;
+            position: relative;
+        }
+        
+        
+        .section{
+            position: relative;
+            
+            
+            &__title{
+            padding: 80px 0 40px;
+            }
+
+            &__img{
+                position: absolute;
+                top: 37px;
+                left: -430px;
+
+                &_basket{
+                    top: 59px;
+                    right: -512px;
+                    left: auto;
+                }
+            }
+            
+        }
+    }
+}
+
+
+@media (min-width: 1530px){
+    .section_desc{
+        overflow: visible;
+        .card{
+            flex-basis: 50%;
+            min-height: 250px;
+
+            &__title-container{
+                padding-bottom: 30px;
+            }
+
+            .container{
+                padding-left: 20px;
+            }
+        }
+        
+        &.section_reverse{
+            .card{
+                margin-left: 0;
+                margin-right: auto;
+                display: flex;
+                justify-content: flex-end;
+            }
+        }
+
+        .section{
+            &__img{
+                top: 84px;
+                left: -640px;
+
+                &_basket{
+                    top: -33px;
+                    right: -742px;
+                    left: auto;
+                }
+            }
+            
+        }
+
+        
+    }
+}
+
+// end of athlets and players desktop and tablet style
+
+// footer style
+
+.logotype{
+    display: block;
+    text-decoration: none;
+}
+
+.footer{
+    .flex-container{
+        display: flex;
+        justify-content: center;
+    }
+
+    .title{
+        &::before{
+            content: url(../img/footer-stripes.png);
+            width: 612px;
+            height: 314px;
+            top: -105px;
+            left: 35px;
+            z-index: -1;
+        }
+    }
+
+    .banner__btns{
+        padding: 0;
+    }
+
+    &__wrapper{
+        padding: 250px 0 160px;
+    }
+
+    &__title-container{
+        padding-left: 35px;
+        position: relative;
+        z-index: 1;
+    }
+
+    &__bottom{
+        .flex-container{
+            justify-content: flex-start;
+            align-items: center;
+        }
+    }
+
+    &__btns{
+        display: flex;
+        justify-content: center;
+        padding-bottom: 200px;
+    }
+}
+
+.bottom{
+    padding: 70px 0;
+    background-color: rgba(10, 14, 52, .6);
+    
+    &__nav{
+        margin-left: auto;
+        display: flex; 
+    }
+
+    &__link{
+        display: block;
+        color: #ffffff;
+        font-size: 20px;
+        text-decoration: none;
+
+        &:nth-child(odd){
+            padding-right: 10px;
+            border-right: 1px solid #fff;
+        }
+
+        &:nth-child(even){
+            padding-left: 10px;
+        }
+    }
+
+    .social{
+        margin-left: auto;
+        width:140px;
+        display: flex;
+        justify-content: space-between; 
+        align-items: center;
+        
+        &__item{
+            display: block;
+        }
+    }
+}
+
+@media (max-width: 1530px){
+    .footer{
+        .flex-container{
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .title{
+            width: 100%;
+            font-size: 80px;
+            letter-spacing: 4.85px;
+
+            &:before{
+                content: url(../img/footer-stripe_tablet.png);
+                width: 562px;
+                height: 314px;
+                top: -80px;
+                left: 0px;
+            }
+        }
+
+        
+    
+        &__wrapper{
+            padding: 130px 0 200px;
+        }
+    
+        &__title-container{
+            padding-left: 0;
+            text-align: center;
+            padding-top: 80px;
+
+        }
+    
+        &__bottom{
+            .flex-container{
+                justify-content: flex-start;
+                align-items: center;
+            }
+        }
+
+        &__btns{
+            padding-bottom: 120px;
+        }
+    }
+
+    .bottom{
+        padding: 35px 0;
+
+        &__logo{
+            display: none;
+        }
+        &__nav{
+            display: none;
+        }
+
+        .social{
+            margin: auto;
+        }
+    }
+}
+
+@media (max-width: 768px){
+    .subtitle{
+        font-size: 14px;
+        letter-spacing: 0.75px;
+    }
+    .footer{
+        .title{
+            font-size: 32px;
+            letter-spacing: 1.7px;
+
+            &:before{
+                content: url(../img/footer-stripe_mob.png);
+                width: 223px;
+                height: 120px;
+                top: -40px;
+                left: 0;
+            }
+        }
+
+        &__wrapper{
+            padding: 100px 0 70px;
+        }
+    }
+    .bottom{
+        padding: 20px 0;
+    }
+    
+}
+
+
