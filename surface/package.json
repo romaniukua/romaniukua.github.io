@@ -1,0 +1,19 @@
+{
+  "name": "surface",
+  "version": "1.0.0",
+  "description": "surface_project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "romaniuk.github.io"
+  },
+  "author": "romaniukua",
+  "license": "ISC",
+  "dependencies": {
+    "fotorama": "^4.6.4",
+    "jquery": "^3.4.1"
+  }
+}
