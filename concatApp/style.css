@@ -1,0 +1,25 @@
+.container{
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+#form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-control{
+    margin-bottom: 20px;
+}
+
+.fileInput-control{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.canvas-container{
+    display: flex;
+    justify-content: center;
+}
