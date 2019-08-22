@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bike</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500i,700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/744350b5dd.js"></script>
+    <!-- jQuery 1.8 or later, 33 KB -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+    <!-- Fotorama from CDNJS, 19 KB -->
+    <link  href="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.js"></script>
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="wrapper">
+                <div class="logo">
+                    <a href="#" class="logo__a">
+                        <img src="./img/logo.png" alt="bike">
+                    </a>
+                </div>
+                <nav class="nav">
+                    <ul class="menu">
+                        <li class="menu__item">
+                            <a href="#" class="menu__a">Велосипеды</a>
+                            <ul class="menu__dropdown">
+                                <li class="menu__drop-item"><a href="#" class="menu__drop-a">Горные велосипеды</a></li>
+                                <li class="menu__drop-item"><a href="#" class="menu__drop-a">Женские велосипеды</a></li>
+                                <li class="menu__drop-item"><a href="#" class="menu__drop-a">Фэтбайки</a></li>
+                                <li class="menu__drop-item"><a href="#" class="menu__drop-a">Дорожные велосипеды</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="menu__item">
+                            <a href="#" class="menu__a">Аксессуары</a>
+                            <ul class="menu__dropdown">
+                                <li class="menu__drop-item"><a href="#" class="menu__drop-a">Сумки</a></li>
+                                <li class="menu__drop-item"><a href="#" class="menu__drop-a">Крылья</a></li>
+                                <li class="menu__drop-item"><a href="#" class="menu__drop-a">Замки</a></li>
+                                <li class="menu__drop-item"><a href="#" class="menu__drop-a">Велокомпьютеры</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu__item">
+                            <a href="#" class="menu__a">Запчасти</a>
+                            <ul class="menu__dropdown">
+                                <li class="menu__drop-item"><a href="#" class="menu__drop-a">Горные велосипеды</a></li>
+                                <li class="menu__drop-item"><a href="#" class="menu__drop-a">Женские велосипеды</a></li>
+                                <li class="menu__drop-item"><a href="#" class="menu__drop-a">Фэтбайки</a></li>
+                                <li class="menu__drop-item"><a href="#" class="menu__drop-a">Дорожные велосипеды</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+
+                <form action="#" class="form">
+                    <input type="text" id="search" class='form__search'>
+                    <label for="search">
+                        <i class="fas fa-search form__icon"></i>
+                    </label>
+                </form>
+                <div class="social">
+                    <div class="social__wrapper">
+                        <a href="https://www.facebook.com/" class="social__a">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://www.instagram.com/" class="social__a">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://www.youtube.com/" class="social__a">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                    <p class="social__phone">+38 (063) 940 47 40</p>
+                </div>
+            </div>
+
+        </div>
+    </header>
+    <main class="main">
+        <section class="slider">
+            <div class="fotorama"
+                data-fit="cover"
+                data-width="100%"
+                data-arrows="true"
+                data-swipe="true"
+                data-nav="false">
+                <img src="img/slider_img.png">
+                <img src="img/slider_img.png">
+            </div>
+        </section>
+        <section class="advantages">
+            <div class="container">
+                <h1 class="advantages__title title">Наши преимущества</h1>
+                <div class="cards">
+                    <div class="cards__item card">
+                        <a href="#" class="card__icon">
+                            <i class="fas fa-tools"></i>
+                        </a>
+                        <h2 class="card__title">
+                            ПРЕДПРОДАЖНАЯ СБОРКА И НАСТРОЙКА
+                        </h2>
+                        <p class="card__content">
+                            Мы предоставляем услугу сборки,настройки и предпродажной
+                            подготовки перед тем как велосипед отправится на почту,это делается
+                            БЕСПЛАТНО. Бесплатная сборка и настройка не распостраняется на велосипеды.
+                        </p>
+                    </div>
+                    <div class="cards__item card">
+                        <a href="#" class="card__icon">
+                            <i class="fas fa-headset"></i>
+                        </a>
+                        <h2 class="card__title">
+                            ПРЕДПРОДАЖНАЯ СБОРКА И НАСТРОЙКА
+                        </h2>
+                        <p class="card__content">
+                            Мы предоставляем услугу сборки,настройки и предпродажной
+                            подготовки перед тем как велосипед отправится на почту,это делается
+                            БЕСПЛАТНО. Бесплатная сборка и настройка не распостраняется на велосипеды.
+                        </p>
+                    </div>
+                    <div class="cards__item card">
+                        <a href="#" class="card__icon">
+                            <i class="fas fa-book"></i>
+                        </a>
+                        <h2 class="card__title">
+                            ПРЕДПРОДАЖНАЯ СБОРКА И НАСТРОЙКА
+                        </h2>
+                        <p class="card__content">
+                            Мы предоставляем услугу сборки,настройки и предпродажной
+                            подготовки перед тем как велосипед отправится на почту,это делается
+                            БЕСПЛАТНО. Бесплатная сборка и настройка не распостраняется на велосипеды.
+                        </p>
+                    </div>
+                    <div class="cards__item card">
+                        <a href="#" class="card__icon">
+                            <i class="fas fa-assistive-listening-systems"></i>
+                        </a>
+                        <h2 class="card__title">
+                            ПРЕДПРОДАЖНАЯ СБОРКА И НАСТРОЙКА
+                        </h2>
+                        <p class="card__content">
+                            Мы предоставляем услугу сборки,настройки и предпродажной
+                            подготовки перед тем как велосипед отправится на почту,это делается
+                            БЕСПЛАТНО. Бесплатная сборка и настройка не распостраняется на велосипеды.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="about">
+            <div class="overlay"></div>
+            <div class="container">
+                <h2 class="about__title title">
+                    О нас
+                </h2>
+                <p class="about__content content">
+                    Каждый из всех людей хотя бы один раз в своей жизни пробовал
+                    прокатиться на велосипеде и наверняка на всю жизнь запомнил
+                    непередаваемые эти ощущения счастья и равновесия.
+                </p>
+                <p class="about__content content">
+                    История нашего интернет-магазина "Best-bike" началась в 2009 году. Мы заядлые любители велоспорта и
+                    как только у нас появляется свободное время,мы едем на трассу здоровья и наматываем там не один
+                    круг. А также участвуем во всех любительских вело соревнованиях. Мы и Вас призываем приобщаться к
+                    велосипедной культуре,ведь в нашей стране она стремительно развивается.
+                    Катаясь на велосипеде мы ведем здоровый образ жизни, тем самым продлевая здоровье себе и своим
+                    детям.
+                </p>
+                <p class="about__content content">
+                    Мы продаем велосипеды самых разных производителей. У нас каждый найдет для себя велосипед,
+                    велосипедные аксессуары, велосипедные запчасти,получит обширную и грамотною консультацию.
+                </p>
+            </div>
+        </section>
+        <section class="consultation">
+            <div class="container">
+                <h2 class="title title_black">Нужна консультация?</h2>
+                <p class="consultation__content content content_black">
+                    Оставьте свои данные и мы свяжемся с вами в ближайшее время
+                </p>
+                <form action="https://fom.in.ua/echo" method="POST" class="form consultation__form">
+                    <input type="text" id="name" name="name" class='form__search form__search_black' placeholder="Имя" required pattern="\w{3,}">
+                    <input type="text" id="phone" name="phone" class='form__search form__search_black' placeholder="Телефон" required>
+                    <button type="submit" class="form__submit">Отправить</button>
+                </form>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="container footer__container">
+            <div class="wrapper">
+                <div class="logo">
+                    <a href="#" class="logo__a">
+                        <img src="./img/logo.png" alt="bike">
+                    </a>
+                </div>
+                <div class="social social_white">
+                    <div class="social__wrapper">
+                        <a href="https://www.facebook.com/" class="social__a">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://www.instagram.com/" class="social__a">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://www.youtube.com/" class="social__a">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                    <p class="social__phone">Bike Sport 2011-2018</p>
+                </div>
+                <nav class="fnav">
+                    <ul class="fnav__column">
+                        <li class="fnav__item"> ГОРНЫЕ</li>
+                        <li class="fnav__item">ДОРОЖНЫЕ</li>
+                    </ul>
+                    <ul class="fnav__column">
+                        <li class="fnav__item">ФЭТБАЙКИ</li>
+                        <li class="fnav__item">ЖЕНСКИЕ</li>
+                    </ul>
+                </nav>
+
+                <div class="contacts">
+                    <p class="contacts__text">+38 (063) 940 47 40</p>
+                    <p class="contacts__text">с 9.00 до 21.00 без выходных</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
